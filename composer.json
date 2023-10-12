@@ -1,0 +1,51 @@
+{
+    "minimum-stability": "dev",
+    "name": "laravia/counter",
+    "description": "laravia package counter for heart",
+    "license": "license",
+    "authors": [
+        {
+            "name": "laravia",
+            "email": "code@laravia.art",
+            "homepage": "https://laravia.art"
+        }
+    ],
+    "homepage": "https://laravia.art",
+    "keywords": [
+        "Laravel",
+        "Laravia",
+        "Counter"
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravia\\Counter\\App\\": "./app",
+            "Laravia\\Counter\\Database\\": "./database",
+            "Laravia\\Counter\\Database\\Seeders\\": "./database/seeders"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laravia\\Counter\\App\\": "./app",
+            "Laravia\\Counter\\Database\\": "./database",
+            "Laravia\\Counter\\Database\\Seeders\\": "./database/seeders",
+            "Laravia\\Counter\\Tests\\": "./tests"
+        }
+    },
+    "scripts": {
+        "post-root-package-update": []
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravia\\Counter\\App\\Providers\\CounterServiceProvider"
+            ],
+            "aliases": {
+                "LaraviaCounter": "Laravia\\Counter\\App\\Counter"
+            }
+        }
+    }
+}
