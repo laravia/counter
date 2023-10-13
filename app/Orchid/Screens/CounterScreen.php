@@ -7,7 +7,7 @@ use Laravia\Counter\App\Orchid\Layouts\CounterListLayout;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
-class Counter extends Screen
+class CounterScreen extends Screen
 {
 
     public function query(): iterable
