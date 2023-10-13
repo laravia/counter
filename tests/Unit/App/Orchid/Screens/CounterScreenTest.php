@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravia\Counter\Tests\Unit\App;
+namespace Laravia\Counter\Tests\Unit\App\Orchid\Screens;
 
 use Laravia\Counter\App\Orchid\Screens\Counter;
 use Laravia\Heart\App\Classes\TestCase;
