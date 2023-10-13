@@ -16,7 +16,7 @@ class CounterServiceProvider extends ServiceProvider
 
     public function increaseBackendCounterAfterLogin()
     {
-        if (Laravia::isInitialCall()) {
+        if (Laravia::isInitialBackendCall()) {
             Counter::increase('backend');
         }
     }
