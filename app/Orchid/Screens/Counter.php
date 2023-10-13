@@ -13,6 +13,7 @@ class Counter extends Screen
     public function query(): iterable
     {
         return [
+            'counters' => ModelsCounter::orderByDesc('id')->paginate(),
             'metrics' => [
                 'countersBackend' => ['all' => ModelsCounter::where('key', '=', 'backend')->count()],
                 'countersFrontend' => ['all' => ModelsCounter::where('key', '=', 'frontend')->count()],
@@ -42,7 +43,7 @@ class Counter extends Screen
                 'Backend'    => 'metrics.countersBackend.all',
                 'Frontend'    => 'metrics.countersFrontend.all',
             ]),
-
+            CounterListLayout::class
         ];
     }
 }
