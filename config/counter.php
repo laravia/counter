@@ -1,6 +1,6 @@
 <?php
 
-use Laravia\Counter\App\Orchid\Screens\CounterScreen;
+use Laravia\Counter\App\Counter;
 
 $config['counter']['links'] = [
     [
@@ -13,5 +13,5 @@ $config['counter']['links'] = [
 ];
 
 $config['counter']['dashboard']['metrics'] = [
-    'counterBackend' => ['sort' => 100, 'value' => data_get((new CounterScreen())->query(), 'metrics.countersBackend.all'), 'title' => 'Counter Backend'],
+    'counterBackend' => ['sort' => 100, 'value' => Counter::getDashboardMetrics('counterBackend'), 'title' => 'Counter Backend'],
 ];
